@@ -15,6 +15,8 @@
   <div class="container">
     <p class="lead">This is a tool to control the product data.</p>
     <button class="button button-energized" ng-click="load()">Load data</button>
+    <br>
+    <i class="ion-alert-circled"></i> modified data will be reset.
   </div>
 </header>
 
@@ -40,6 +42,11 @@
       <td align="right">
         <div style="margin-top: 8px">
           <button class="button button-assertive" ng-click="update($index)">Update</button>
+        </div>
+      </td>
+      <td align="right">
+        <div style="margin-top: 8px">
+          <button class="button button-stable" ng-click="delete($index)">Delete</button>
         </div>
       </td>
     </tr>

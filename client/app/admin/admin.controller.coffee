@@ -18,3 +18,7 @@ angular.module 'meanDemoApp'
       price: $scope.products[index].price
       description: $scope.products[index].description
     )
+
+  $scope.delete = (index) ->
+    $http.delete('api/products/' + $scope.products[index]._id)
+    $scope.products.splice(index, 1)

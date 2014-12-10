@@ -110,18 +110,6 @@ var product_data =[
     price: '790',
     description: 'ふんわり柔らかなコットン素材のフライスカバーオール。',
     image: 'http://im.uniqlo.com/images/jp/pc/goods/133235/item/01_133235_middles.jpg'
-  },
-  {
-    name: 'ＢＡＢＹフライスカバーオール（車・長袖）',
-    price: '990',
-    description: 'ふんわり柔らかなコットン素材のフライスカバーオール。',
-    image: 'http://im.uniqlo.com/images/jp/pc/goods/133245/item/54_133245_middles.jpg'
-  },
-  {
-    name: 'ＢＡＢＹパイルカバーオール（ワイドボーダー・長袖）',
-    price: '990',
-    description: '全身を包み込むカバーオール。',
-    image: 'http://im.uniqlo.com/images/jp/pc/goods/135948/item/69_135948_middles.jpg'
   }
 ];
 
