@@ -1,3 +1,47 @@
-<div class="col-md-12">
-This is the admin view.
+<div class="navbar navbar-default navbar-static-top" xmlns="http://www.w3.org/1999/html">
+  <div class="container">
+    <div class="navbar-header">
+      <a ng-href="" class="navbar-brand">
+        <i class="ion-settings"></i>
+      </a>
+      <a ng-href="/#front" class="navbar-brand">
+        <i class="ion-iphone"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <p class="lead">This is a tool to control the product data.</p>
+    <button class="button button-energized" ng-click="load()">Load data</button>
+  </div>
+</header>
+
+<div class="container" id="product">
+  <table class="table table-striped">
+    <tr ng-repeat="p in products">
+      <td>
+        <div style="margin-top: 8px">
+          <img ng-src="{{p.image}}" height="50px">
+        </div>
+      </td>
+      <td>
+        <div class="col-xs-3" style="margin-top:10px">
+          <input type="text" class="form-control" value="{{p.name}}">
+        </div>
+        <div class="col-xs-3" style="margin-top:10px">
+          <input type="text" class="form-control" value="{{p.price}}">
+        </div>
+        <div class="col-xs-6" style="margin-top:10px">
+          <input type="text" class="form-control" value="{{p.description}}">
+        </div>
+      </td>
+      <td align="right">
+        <div style="margin-top: 8px">
+          <button class="button button-assertive" ng-click="update($index)">Update</button>
+        </div>
+      </td>
+    </tr>
+  </table>
 </div>
