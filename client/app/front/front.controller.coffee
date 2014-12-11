@@ -1,5 +1,5 @@
 'use strict'
 
 angular.module 'meanDemoApp'
-.controller 'ProductCtrl', ($scope) ->
+.controller 'FrontCtrl', ($scope) ->
   $scope.message = 'Hello'
