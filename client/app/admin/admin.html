@@ -1,52 +1,37 @@
-<div class="navbar navbar-default navbar-static-top" xmlns="http://www.w3.org/1999/html">
-  <div class="container">
-    <div class="navbar-header">
-      <a ng-href="" class="navbar-brand">
-        <i class="ion-settings"></i>
-      </a>
-      <a ng-href="/#front" class="navbar-brand">
-        <i class="ion-iphone"></i>
-      </a>
+<ion-content>
+
+  <header class="hero-unit" id="banner">
+    <p>This is a tool to control the product data.</p>
+    <button class="button button-energized" ng-click="load()">Load data</button>
+    <br>
+    <br>
+    <a ng-href="/#front">
+      <i class="ion-iphone"></i>
+      Go to mobile site.
+    </a>
+  </header>
+
+  <div class="card" ng-repeat="p in products">
+    <div class="row">
+      <div class="col col-10" align="center">
+        <img ng-src="{{p.image}}" height="50px">
+      </div>
+      <div class="col col-30" style="margin-top:10px">
+        <input type="text" value="{{p.name}}" ng-model="p.name">
+      </div>
+      <div class="col col-10" style="margin-top:10px">
+        <input type="text" value="{{p.price | currency}}" ng-model="p.price">
+      </div>
+      <div class="col" style="margin-top:10px">
+        <input type="text" class="form-control" value="{{p.description}}" ng-model="p.description">
+      </div>
+      <div class="col col-10">
+        <button class="button button-assertive" ng-click="update($index)">Update</button>
+      </div>
+      <div class="col col-10">
+        <button class="button button-stable" ng-click="delete($index)">Delete</button>
+      </div>
     </div>
   </div>
-</div>
 
-<header class="hero-unit" id="banner">
-  <div class="container">
-    <p class="lead">This is a tool to control the product data.</p>
-    <button class="button button-energized" ng-click="load()">Load data</button>
-  </div>
-</header>
-
-<div class="container" id="product">
-  <table class="table table-striped">
-    <tr ng-repeat="p in products">
-      <td>
-        <div style="margin-top: 8px">
-          <img ng-src="{{p.image}}" height="50px">
-        </div>
-      </td>
-      <td>
-        <div class="col-xs-3" style="margin-top:10px">
-          <input type="text" class="form-control" value="{{p.name}}" ng-model="p.name">
-        </div>
-        <div class="col-xs-3" style="margin-top:10px">
-          <input type="text" class="form-control" value="{{p.price}}" ng-model="p.price">
-        </div>
-        <div class="col-xs-6" style="margin-top:10px">
-          <input type="text" class="form-control" value="{{p.description}}" ng-model="p.description">
-        </div>
-      </td>
-      <td align="right">
-        <div style="margin-top: 8px">
-          <button class="button button-assertive" ng-click="update($index)">Update</button>
-        </div>
-      </td>
-      <td align="right">
-        <div style="margin-top: 8px">
-          <button class="button button-stable" ng-click="delete($index)">Delete</button>
-        </div>
-      </td>
-    </tr>
-  </table>
-</div>
+</ion-content>
