@@ -8,9 +8,15 @@ angular.module 'meanDemoApp'
     $scope.products = products
 
   $scope.load = () ->
-    $http.post('/api/products').success () ->
-      $http.get('api/products').success (products) ->
-        $scope.products = products
+    $http.get('product.json').success (data) ->
+      for i in [0..data.length-1]
+        $http.post('api/products/',
+          name: data[i].name
+          price: data[i].price
+          description: data[i].description
+          image: data[i].image
+        )
+        $scope.products.push(data[i])
 
   $scope.update = (index) ->
     $http.put('api/products/' + $scope.products[index]._id,
