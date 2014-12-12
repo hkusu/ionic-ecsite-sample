@@ -21,7 +21,6 @@ angular.module 'meanDemoApp'
           image: data[i].image
         )
         $scope.products.push(data[i])
-    $window.location.reload()
 
   $scope.update = (index) ->
     $http.put('api/products/' + $scope.products[index]._id,
