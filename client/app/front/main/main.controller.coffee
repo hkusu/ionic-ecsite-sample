@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module 'meanDemoApp'
-.controller 'MainCtrl', ($scope, $ionicModal) ->
+.controller 'MainCtrl', ($scope, $ionicModal, $ionicActionSheet, $timeout) ->
 
   $ionicModal.fromTemplateUrl("modal.html",
     scope: $scope
@@ -20,4 +20,27 @@ angular.module 'meanDemoApp'
 
   $scope.$on "$destroy", ->
     $scope.modal.remove()
+    return
+
+  $scope.share = ->
+    hideSheet = $ionicActionSheet.show(
+      buttons: [
+        {
+          text: "<i class='ion-social-twitter'>"
+        }
+        {
+          text: "<i class='ion-social-facebook'>"
+        }
+        {
+          text: "<i class='ion-social-googleplus'>"
+        }
+      ]
+      titleText: "choose social service"
+      buttonClicked: (index) ->
+        return
+    )
+    $timeout (->
+      hideSheet()
+      return
+    ), 2000
     return

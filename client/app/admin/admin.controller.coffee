@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module 'meanDemoApp'
-.controller 'AdminCtrl', ($scope, $http, $window) ->
+.controller 'AdminCtrl', ($scope, $http) ->
   can_access = false
   $scope.products = []
 
