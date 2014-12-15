@@ -6,54 +6,42 @@
     </ion-nav-back-button>
   </ion-nav-bar>
 
-  <ion-content>
+  <ion-content padding="true">
 
     <div class="list">
 
-      <label class="item item-input">
-        <span class="input-label">Username</span>
-        <input type="text">
-      </label>
-
-      <label class="item item-input">
-        <span class="input-label">Password</span>
-        <input type="password">
-      </label>
-
       <label class="item item-input item-select">
         <div class="input-label">
-          Lightsaber
+          Gender
         </div>
         <select>
-          <option>Blue</option>
-          <option selected>Green</option>
-          <option>Red</option>
+          <option>Man</option>
+          <option selected>Woman</option>
         </select>
       </label>
 
-      <div class="item range range-positive">
-        <i class="icon ion-ios7-sunny-outline"></i>
-        <input type="range" name="volume" min="0" max="100" value="33">
-        <i class="icon ion-ios7-sunny"></i>
-      </div>
-
-      <label class="item item-radio">
-        <input type="radio" name="group">
-        <div class="item-content">
-          Go
-        </div>
-        <i class="radio-icon ion-checkmark"></i>
-      </label>
-
-      <li class="item item-checkbox">
-        <label class="checkbox">
+      <li class="item item-toggle">
+        Push notification
+        <label class="toggle toggle-assertive">
           <input type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
         </label>
-        Flux Capacitor
       </li>
 
-      <li class="item item-toggle">
-        HTML5
+      <li class="item item-toggle" style="color: #0a9ec7">
+        <i class="ion-social-twitter"></i> Twitter
+        <label class="toggle toggle-assertive">
+          <input type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+
+      <li class="item item-toggle" style="color: darkblue">
+        <i class="ion-social-facebook"></i> Facebook
         <label class="toggle toggle-assertive">
           <input type="checkbox">
           <div class="track">

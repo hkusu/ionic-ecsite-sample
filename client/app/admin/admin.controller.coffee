@@ -2,15 +2,15 @@
 
 angular.module 'meanDemoApp'
 .controller 'AdminCtrl', ($scope, $http) ->
-  can_access = false
+  $scope.can_access = false
   $scope.products = []
 
   $http.get('api/products').success (products) ->
     $scope.products = products
-    can_access = true
+    $scope.can_access = true
 
   $scope.load = () ->
-    if !can_access
+    if !$scope.can_access
       return
     $http.get('product.json').success (data) ->
       for i in [0..data.length-1]

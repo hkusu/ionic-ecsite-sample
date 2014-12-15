@@ -1,5 +1,5 @@
 <ion-view title="" hide-nav-bar="true" hide-back-button="true">
-  <ion-pane>
+  <ion-content>
 
     <div class="row">
       <div class="col" align="left" style="font-size: 24px" menu-toggle="left">
@@ -17,7 +17,7 @@
     <div class="row">
       <div class="col">
         <div class="button-bar">
-          <a class="button button-calm" ng-href="/#front/shopping">
+          <a class="button button-calm" ng-href="/front/shopping">
             <div style="font-size: 60px;color: #ffffff; margin: 30px 0px 0px 0px;">
               <i class="ion-bag"></i>
             </div>
@@ -40,7 +40,7 @@
     <div class="row">
       <div class="col">
         <div class="button-bar">
-          <a class="button button-energized" ng-href="/#front/tutorial"">
+          <a class="button button-energized" ng-click="openModal()">
             <div style="font-size: 60px;color: #ffffff; margin: 30px 0px 0px 0px;">
               <i class="ion-ios-book"></i>
             </div>
@@ -50,7 +50,7 @@
       </div>
       <div class="col">
         <div class="button-bar">
-          <a class="button button-assertive" ng-click="openModal()">
+          <a class="button button-assertive" ng-click="showPopup()">
             <div style="font-size: 60px;color: #ffffff; margin: 30px 0px 0px 0px;">
               <i class="ion-android-favorite"></i>
             </div>
@@ -73,7 +73,7 @@
       </div>
       <div class="col">
         <div class="button-bar">
-          <a class="button button-dark" ng-href="/#front/setting">
+          <a class="button button-dark" ng-href="/front/setting">
             <div style="font-size: 60px;color: #ffffff; margin: 30px 0px 0px 0px;">
               <i class="ion-ios-gear"></i>
             </div>
@@ -83,24 +83,140 @@
       </div>
     </div>
 
+    <div class="row">
+      <div class="col">
+        <div class="button-bar">
+          <a class="button button-positive" ng-click="openPopover($event)">
+            <div style="font-size: 60px;color: #ffffff; margin: 30px 0px 0px 0px;">
+              <i class="ion-information-circled"></i>
+            </div>
+            infomation
+          </a>
+        </div>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+
+    <!-- モーダル -->
     <script id="modal.html" type="text/ng-template">
       <ion-modal-view>
         <ion-pane>
-          <br>
-          <br>
-          <div align="center">
-            <h2 style="color: dimgray">
-              Coming soon..
-            </h2>
-            <br>
-            <button class="button button-lite button-large" ng-click="closeModal()">
-              <i class="ion-close-circled"></i> CLOSE
-            </button>
-          </div>
-          <br>
+
+          <ion-slide-box>
+            <ion-slide>
+              <div class="row">
+                <div class="col" align="left">
+                </div>
+                <div class="col col-50">
+                </div>
+                <div class="col" align="right" style="color: cornflowerblue">
+                  <a class="button button-positive button-clear" ng-click="closeModal()">
+                    skip
+                  </a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col" align="center" style="background: ghostwhite">
+                  <br>
+                  This is a tutorial samle (1/3)
+                  <br><br><br><br><br>
+                  <div style="font-size: 60px; color: #0c63ee">
+                    <i class="ion-ionic"></i>
+                  </div>
+                  <br><br><br><br><br>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col" align="center" style="color: dimgray">
+                  <i class="ion-record"></i> <i class="ion-ios-circle-outline"></i> <i class="ion-ios-circle-outline"></i>
+                </div>
+              </div>
+            </ion-slide>
+
+            <ion-slide>
+              <div class="row">
+                <div class="col" align="left">
+                </div>
+                <div class="col col-50">
+                </div>
+                <div class="col" align="right" style="color: cornflowerblue">
+                  <a class="button button-positive button-clear" ng-click="closeModal()">
+                    skip
+                  </a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col" align="center" style="background: ghostwhite">
+                  <br>
+                  This is a tutorial samle (2/3)
+                  <br><br><br><br><br>
+                  <div style="font-size: 60px; color: mediumpurple">
+                    <i class="ion-social-octocat"></i>
+                  </div>
+                  <br><br><br><br><br>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col" align="center" style="color: dimgray">
+                  <i class="ion-ios-circle-outline"></i> <i class="ion-record"></i> <i class="ion-ios-circle-outline"></i>
+                </div>
+              </div>
+            </ion-slide>
+
+            <ion-slide>
+              <div class="row">
+                <div class="col" align="left">
+                </div>
+                <div class="col col-50">
+                </div>
+                <div class="col" align="right" style="color: cornflowerblue">
+                  <a class="button button-positive button-clear" ng-click="closeModal()">
+                    <!-- skip -->
+                  </a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col" align="center" style="background: ghostwhite">
+                  <br>
+                  This is a tutorial samle (3/3)
+                  <br><br><br><br>
+                  <div style="font-size: 60px; color: red">
+                    <i class="ion-social-html5"></i>
+                  </div>
+                  <br><br>
+                  <a class="button button-assertive button-outline" ng-click="closeModal()">
+                    Start now
+                  </a>
+                  <br><br>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col" align="center" style="color: dimgray">
+                  <i class="ion-ios-circle-outline"></i> <i class="ion-ios-circle-outline"></i> <i class="ion-record"></i>
+                </div>
+              </div>
+            </ion-slide>
+
+          </ion-slide-box>
         </ion-pane>
       </ion-modal-view>
     </script>
 
-  </ion-pane>
+    <!-- ポップオーバー -->
+    <script id="popover.html" type="text/ng-template">
+      <ion-popover-view>
+        <ion-content padding="true" style="margin: 30px 30px 30px 30px">
+          This application is a demonstration site using the ionic framework.
+          <br>
+          <br>
+          <br>
+          <div align="center" style="font-size: 90px; color: blue">
+            <i class="ion-ionic"></i>
+          </div>
+        </ion-content>
+      </ion-popover-view>
+    </script>
+
+  </ion-content>
 </ion-view>

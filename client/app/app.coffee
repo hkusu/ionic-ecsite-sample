@@ -9,6 +9,6 @@ angular.module 'meanDemoApp', [
 ]
 .config ($stateProvider, $urlRouterProvider, $locationProvider) ->
   $urlRouterProvider
-  .otherwise '/admin'
+  .otherwise '/front/main'
 
   $locationProvider.html5Mode true

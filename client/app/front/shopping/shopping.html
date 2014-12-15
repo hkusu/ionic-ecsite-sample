@@ -8,10 +8,27 @@
 
   <ion-content padding="true">
 
+    <div class="row">
+      <div class="col" style="color: gray" align="right">
+        <p>you can swipe the list to the left.</p>
+      </div>
+    </div>
+
     <ion-list>
-      <ion-item ng-repeat="p in products">
-        {{p.name}}
+
+      <ion-item ng-repeat="p in products"
+                can-swipe="false"
+                class="item-thumbnail-left">
+        <img ng-src="{{p.image}}">
+        <h2>{{p.name}}</h2>
+        <p>{{p.description}}</p>
+        <p align="right"><a class="button button-small button-outline" href="/front/shopping_detail/{{p._id}}">show detail..</a></p>
+        <ion-option-button class="button-positive"
+                           ng-click="share()">
+          Share
+        </ion-option-button>
       </ion-item>
+
     </ion-list>
 
   </ion-content>

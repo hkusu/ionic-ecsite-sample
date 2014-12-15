@@ -1,0 +1,48 @@
+<ion-view title="{{product.name}}">
+
+  <ion-nav-bar class="bar-calm">
+    <ion-nav-back-button class="button-clear">
+      <i class="icon ion-chevron-left"></i> back
+    </ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-content padding="true">
+
+    <div class="row" style="color: dimgray" align="center">
+      <div class="col">
+        {{product.name}}
+      </div>
+    </div>
+
+    <div class="row" align="center">
+      <div class="col">
+        <div class="list card">
+          <div class="item item-image">
+            <ion-slide-box does>
+              <ion-slide>
+                <img ng-src="{{product.image}}">
+              </ion-slide>
+              <ion-slide>
+                <img ng-src="{{product.image}}">
+              </ion-slide>
+              <ion-slide>
+                <img ng-src="{{product.image}}">
+              </ion-slide>
+            </ion-slide-box>
+            <i class="ion-arrow-left-b"></i>&nbsp;&nbsp;&nbsp;<i class="ion-arrow-right-b"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="color: dimgray">
+      <div class="col">
+        {{product.description}}
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
+
+
+

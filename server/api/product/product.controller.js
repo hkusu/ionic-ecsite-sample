@@ -12,6 +12,7 @@ var Product = require('./product.model');
 // Get list of products
 exports.index = function(req, res) {
 
+/*
   // Check client ip address
   var client_ip = req.connection.remoteAddress;
   if (client_ip != '127.0.0.1') {
@@ -25,6 +26,7 @@ exports.index = function(req, res) {
     }
     if (ng) {return res.send(500);}
   }
+*/
 
   Product.find(function (err, products) {
     if(err) { return handleError(res, err); }

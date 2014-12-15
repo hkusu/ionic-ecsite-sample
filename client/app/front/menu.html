@@ -14,16 +14,16 @@
 
   <!-- 左メニュー -->
   <ion-side-menu side="left">
-    <ion-pane>
+    <ion-pane style="background-color: #262626">
       <div class="button-bar">
-        <a class="button button-clear button-stable button-large" menu-close nav-clear ng-href="/#front/main">
+        <a class="button button-clear button-stable button-large" menu-close nav-clear ng-href="/front/main">
           <div align="left">
-            <i class="ion-home"></i> mobile home
+            <i class="ion-home"></i> HOME
           </div>
         </a>
       </div>
       <div class="button-bar">
-        <a class="button button-clear button-stable button-large" menu-close nav-clear ng-href="/#admin">
+        <a class="button button-clear button-stable button-large" menu-close nav-clear ng-href="/admin" target="_blank">
           <div align="left">
             <i class="ion-wrench"></i> go admin tool
           </div>
@@ -37,15 +37,8 @@
         </a>
       </div>
       <div class="button-bar">
-        <a class="button button-clear button-stable button-large" menu-close nav-clear ng-href="/#front/tutorial">
-          <div align="left">
-            <i class="ion-ios-book"></i> tutorial
-          </div>
-        </a>
-      </div>
-      <div class="button-bar">
-        <a class="button button-clear button-light" menu-close nav-clear ng-href="/#sandbox">
-          <div align="left">
+        <a class="button button-clear button-light" menu-close nav-clear ng-href="/sandbox">
+          <div align="left" style="color: dimgray">
             sandbox
           </div>
         </a>
@@ -56,7 +49,9 @@
 
   <!-- 右メニュー -->
   <ion-side-menu side="right">
-    <ion-pane>
+    <ion-pane style="margin-top: -20px; background-color: #262626">
+
+      <br>
 
       <div class="list card">
         <div class="item" align="center">
@@ -67,18 +62,17 @@
         </div>
       </div>
 
-      <div align="right" style="margin-right: 20px">
+      <div align="right" style="margin-right: 20px; margin-top: -10px; color: #ffffff">
         <i class="ion-social-yen-outline"></i> 2,500
       </div>
 
       <div class="row">
         <div class="col" align="center" menu-close>
-          <button class="button button-dark button-outline button-small">
+          <button class="button button-light button-outline button-small">
             <i class="ion-close"></i> CLOSE
           </button>
         </div>
       </div>
-
 
     </ion-pane>
   </ion-side-menu>
